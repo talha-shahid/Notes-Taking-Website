@@ -6,23 +6,8 @@ let addBtn = document.getElementById('addBtn');
 
 addBtn.addEventListener("click", function (e) {
     let addTxt = document.getElementById('addTxt');
-    let notes = localStorage.getItem('notes');
-
-    if (notes == null) {
-        notesObj = [];
-    }
-    else {
-        notesObj = JSON.parse(notes)
-    }
-    notesObj.push(addTxt.value);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
-    addTxt.value = "";
-    showNotes();
-})
-
-addTitleBtn.addEventListener("click", function (e) {
-    let addTitle = document.getElementById('addTitle');
     let title = localStorage.getItem('title');
+    let notes = localStorage.getItem('notes');
 
     if (title == null) {
         titleObj = [];
@@ -30,11 +15,24 @@ addTitleBtn.addEventListener("click", function (e) {
     else {
         titleObj = JSON.parse(title);
     }
+
+    if (notes == null) {
+        notesObj = [];
+    }
+    else {
+        notesObj = JSON.parse(notes)
+    }
+
     titleObj.push(addTitle.value);
     localStorage.setItem("title", JSON.stringify(titleObj));
     addTitle.value = "";
+
+    notesObj.push(addTxt.value);
+    localStorage.setItem("notes", JSON.stringify(notesObj));
+    addTxt.value = "";
     showNotes();
 })
+
 
 //showNotes function
 

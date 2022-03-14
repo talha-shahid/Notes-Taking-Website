@@ -5,29 +5,15 @@
 body{
     background-image: linear-gradient(to bottom right, rgba(23, 219, 177, 0.774) , rgba(255, 255, 0, 0.596));
 }
-#addTitleBtn{
-    margin-bottom: 15px;
-    margin-top: 5px;
+button{
     background-image: linear-gradient(to bottom right, rgba(23, 219, 177, 0.774) , rgba(255, 255, 0, 0.808));
-    border: 2px solid wheat;
-    
-}
-#addBtn{
-    margin-top: 5px;
-    background-image: linear-gradient(to bottom right, rgba(23, 219, 177, 0.774) , rgba(255, 255, 0, 0.808));
-    border: 2px solid wheat;
-}
+  }
 
-#addBtn:hover{
-    background-image: linear-gradient(to bottom right, rgb(72, 165, 228) , rgb(228, 180, 78));
-}
-
-#addTitleBtn:hover{
+  button:hover{
     background-image: linear-gradient(to bottom right, rgb(72, 165, 228) , rgb(228, 180, 78));
 }
 .initial{
-    display: flex;
-    
+    display: flex; 
 }
 #pencil{
     height: 10vh;
@@ -62,3 +48,10 @@ body{
     75% {color: rgb(0, 255, 234);background-position: 30% 30%}
     100% {color: rgb(0, 119, 255);background-position: 25% 25%;}
   }
+
+.card-body{
+    background-image: linear-gradient(to bottom right, rgb(72, 165, 228) , rgb(228, 180, 78));
+}
+.you{
+    background-image: linear-gradient(rgb(72, 165, 228) , rgb(228, 180, 78));
+}
